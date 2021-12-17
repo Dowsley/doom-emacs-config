@@ -4,10 +4,12 @@
 ;; sync' after modifying this file!
 (global-set-key (kbd "<dead-tilde>") "~")
 
-(setq-default explicit-shell-file-name "/bin/fish")
+(setq-default explicit-shell-file-name "/bin/fish"
+;;highlight-indent-guides-mode nil
+ highlight-indent-guides-method 'bitmap
+)
 (setq
  neo-window-fixed-size nil
- highlight-indent-guides-method 'bitmap
 )
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
