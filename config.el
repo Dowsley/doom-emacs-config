@@ -2,7 +2,11 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-
+;;
+(setq
+ python-shell-interpreter "C:\\Users\\joaod\\AppData\\Roaming\\Python\\Python38\\Scripts"
+ neo-window-fixed-size nil
+ )
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -19,24 +23,32 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetbrainsMonoNL" :size 12)
-      doom-variable-pitch-font (font-spec :family "JetbrainsMonoNL" :size 13))
+(setq
+ doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 17)
+ doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 15)
+)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-dracula)
 
-(setq neo-window-fixed-size nil)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/desktop/Org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+(setq projectile-project-search-path '("~/desktop/code/"))
 
+;(use-package! python-mode
+;  :ensure nil
+;  :custom
+;  (python-shell-interpreter "python3"))
+(require 'elcord)
+(elcord-mode)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
