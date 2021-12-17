@@ -2,8 +2,13 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-(setq neo-window-fixed-size nil)
+(global-set-key (kbd "<dead-tilde>") "~")
+
 (setq-default explicit-shell-file-name "/bin/fish")
+(setq
+ neo-window-fixed-size nil
+ highlight-indent-guides-method 'bitmap
+)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -53,7 +58,8 @@
 ;; - `map!' for binding new keys
 (require 'elcord)
 (elcord-mode)
-
+(highlight-indent-guides-mode)
+(dtrt-indent-mode)
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
 ;; This will open documentation for it, including demos of how they are used.
