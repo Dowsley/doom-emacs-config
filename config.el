@@ -2,7 +2,8 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-
+(setq neo-window-fixed-size nil)
+(setq-default explicit-shell-file-name "/bin/fish")
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -19,21 +20,22 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetbrainsMonoNL" :size 12)
-      doom-variable-pitch-font (font-spec :family "JetbrainsMonoNL" :size 13))
+(setq
+ doom-font (font-spec :family "JetBrainsMonoNL" :size 12)
+ doom-variable-pitch-font (font-spec :family "JetBrainsMonoNL" :size 13)
+ )
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-dracula)
 
-(setq neo-window-fixed-size nil)
-
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/Org/")
-(setq projectile-project-search-path '("~/Code/"))
-(setq-default explicit-shell-file-name "/bin/fish")
+(setq
+ org-directory "~/Documents/Org/"
+ projectile-project-search-path '("~/Code/")
+)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -51,6 +53,7 @@
 ;; - `map!' for binding new keys
 (require 'elcord)
 (elcord-mode)
+
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
 ;; This will open documentation for it, including demos of how they are used.
