@@ -4,8 +4,9 @@
 ;; sync' after modifying this file!
 (global-set-key (kbd "<dead-tilde>") "~")
 
-(setq-default explicit-shell-file-name "/bin/fish"
-;;highlight-indent-guides-mode nil
+(setq-default
+ explicit-shell-file-name "/bin/fish"
+ highlight-indent-guides-mode nil
  highlight-indent-guides-method 'bitmap
 )
 (setq
