@@ -59,8 +59,6 @@
 ;;   this file. Emacs searches the `load-path' when you load packages with
 ;;   `require' or `use-package'.
 ;; - `map!' for binding new keys
-(require 'elcord)
-(elcord-mode)
 (highlight-indent-guides-mode)
 (dtrt-indent-mode)
 ;; To get information about any of these functions/macros, move the cursor over
