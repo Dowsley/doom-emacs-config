@@ -50,8 +50,6 @@
 ;  :ensure nil
 ;  :custom
 ;  (python-shell-interpreter "python3"))
-(require 'elcord)
-(elcord-mode)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
